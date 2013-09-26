@@ -9,11 +9,11 @@ class puppet {
     mode => '0755',
   }
     
-  file {'/home/ec2-user/.ssh/id_rsa':
-    source => 'puppet:///modules/puppet/id_rsa.pub',
-    owner => 'ec2-user',
-    mode => '0600',
-  }
+#  file {'/home/ec2-user/.ssh/id_rsa':
+#    source => 'puppet:///modules/puppet/id_rsa.pub',
+#    owner => 'ec2-user',
+#    mode => '0600',
+#  }
     
   cron {'run-puppet':
     ensure => 'present',
